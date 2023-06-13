@@ -1,3 +1,5 @@
+package DATA;
+
 import org.testng.annotations.DataProvider;
 
 import java.sql.*;
