@@ -1,21 +1,17 @@
 package DATA;
-
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
-
 import java.io.File;
 import java.io.IOException;
-
 public class Apach_POI_REXCEL {
-
     @DataProvider(name = "Testdata_generated_Excel")
     public static Object[][] getExcelData() {
         Object [][] data;
-
-        File x=new File(System.getProperty("user.dir")+"Resources/tets.xlsx");
+//        File x=new File(System.getProperty("user.dir")+"\\Resources\\file1.csv");
+        File x=new File("C:\\Users\\Ahmed\\IdeaProjects\\DDT_TEST_V_F\\Resources\\t1_v21.xlsx");
         try {
             XSSFWorkbook WB=new XSSFWorkbook(x);
             XSSFSheet sheet=WB.getSheet("Sheet1");
@@ -34,4 +30,6 @@ public class Apach_POI_REXCEL {
             throw new RuntimeException(e);
         }
         return data;
-}}
+}
+}
+
